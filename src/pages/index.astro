@@ -1,11 +1,61 @@
 ---
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="index">
-	test
-</Layout>
+  <section class="stage">
+    <div class="layout">
+      <!-- Left -->
+      <div class="col left">
+        <p class="job-title">job-bezeichnung</p>
 
+        <section class="name-card glass fly-in" style="--delay: 0ms">
+          <h1 class="name">
+            name<br />
+            name
+          </h1>
+        </section>
+
+        <section class="professions fly-in" style="--delay: 120ms">
+          <div class="profession-grid">
+            <div class="profession-pill glass">profession 1</div>
+            <div class="profession-pill glass">profession 2</div>
+            <div class="profession-pill glass">profession 3</div>
+            <div class="profession-pill glass">profession 4</div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Right -->
+      <div class="col right">
+        <section class="picture-card glass fly-in" style="--delay: 60ms">
+          <img
+            class="picture"
+            src="https://picsum.photos/1100/800"
+            alt="Portrait Platzhalter"
+            loading="eager"
+            draggable="false"
+          />
+          <div class="picture-overlay">
+            <span class="picture-label">picture</span>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Bottom nav -->
+    <nav class="bottom-nav fly-in" style="--delay: 180ms" aria-label="Navigation">
+      <div class="nav-pill glass">
+        <div class="nav-title">nav (tyreon brooks auf pintrest)</div>
+        <div class="nav-links" role="list">
+          <a role="listitem" class="nav-link is-active" href="/">home</a>
+          <a role="listitem" class="nav-link" href="/about">about me</a>
+          <a role="listitem" class="nav-link" href="/projects">projects</a>
+          <a role="listitem" class="nav-link" href="/skills">skills</a>
+          <a role="listitem" class="nav-link" href="/services">services</a>
+          <a role="listitem" class="nav-link" href="/contact">contact</a>
+        </div>
+      </div>
+    </nav>
+  </section>
+</Layout>
