@@ -84,7 +84,7 @@ body {
 }
 
 /* =========
-   Header (Component)
+   Header Grundstruktur
    ========= */
 .site-header {
   position: fixed;
@@ -93,45 +93,44 @@ body {
   z-index: 50;
 }
 
+/* =========
+   Header oben (Home / Theme)
+   ========= */
+.header-top {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
 .home-pill,
 .theme-toggle {
-  position: absolute;
-  top: 16px;
   pointer-events: auto;
-  border: 0;
-  cursor: pointer;
-  padding: 8px 12px;
-  border-radius: 14px;
-  font-size: 14px;
-  color: var(--color-text);
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: transparent;
 }
-
-.home-pill { left: 16px; }
-.theme-toggle { right: 16px; }
 
 /* =========
-   Bottom nav (im Header, unten Mitte)
+   Header unten – Navigationszentrum
    ========= */
-.bottom-nav {
-  position: absolute;
-  left: 50%;
-  bottom: 16px;
-  transform: translateX(-50%);
-  width: min(720px, calc(100vw - 32px));
+.header-bottom {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  justify-content: center;   /* horizontal zentriert */
+  align-items: flex-end;     /* vertikal unten */
+
+  padding-bottom: 20px;      /* Abstand zum unteren Fensterrand */
+  pointer-events: none;
+}
+
+/* Navigation selbst wieder klickbar machen */
+.header-bottom .nav-pill {
   pointer-events: auto;
 }
 
-/* Optional: gleiche Animation wie zuvor */
-.bottom-nav {
-  animation: flyIn 680ms cubic-bezier(0.2, 0.9, 0.2, 1) both;
-  animation-delay: 180ms;
-  will-change: transform, opacity, filter;
-}
 
 
 /* =========
